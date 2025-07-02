@@ -21,10 +21,10 @@ VLA models.
 ## :pencil: Citation
 
 ```bibtex
-@article{wang25vqvla,
+@inproceedings{wang25vqvla,
     title={VQ-VLA: Improving Vision-Language-Action Models via Scaling Vector-Quantized Action Tokenizers},
     author={Yating Wang, Haoyi Zhu, Mingyu Liu, Jiange Yang, Hao-Shu Fang, Tong He},
-    journal = {iccv2025},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision},
     year={2025}
 }
 ```
