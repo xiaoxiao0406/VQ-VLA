@@ -18,7 +18,7 @@ VLA models.
 
 ## Code is still under preparation. All code will be available later.
 
-#### Citation
+## :pencil: Citation
 
 ```bibtex
 @article{wang25vqvla,
