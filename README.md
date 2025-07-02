@@ -4,7 +4,9 @@
 
 
 **ICCV 2025**
+
 [**Project Page**](https://xiaoxiao0406.github.io/vqvla.github.io/) | [**Paper**](https://xiaoxiao0406.github.io/vqvla.github.io/static/pdfs/VQ-VLA.pdf) | [**arXiv**](https://arxiv.org/pdf/2507.01016) 
+
 [Yating Wang](https://scholar.google.com/citations?hl=zh-CN&user=5SuBWh0AAAAJ), [Haoyi Zhu](https://www.haoyizhu.site/), [Mingyu Liu](https://mingyulau.github.io/), [Jiange Yang](https://yangjiangeyjg.github.io/),  [Hao-Shu Fang](https://fang-haoshu.github.io/), [Tong He](http://tonghe90.github.io/)
 <!-- <hr style="border: 2px solid gray;"></hr> -->
 </div>
