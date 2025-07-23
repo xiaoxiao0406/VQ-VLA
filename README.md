@@ -2,12 +2,12 @@
 # VQ-VLA: Improving Vision-Language-Action Models via Scaling Vector-Quantized Action Tokenizers
 <div align="center">
 
-[![arXiv](https://img.shields.io/badge/arXiv-2507.01016-df2a2a.svg?style=for-the-badge)](https://arxiv.org/abs/2507.01016)
-[![Project](https://img.shields.io/badge/Project-Page-orange.svg?style=for-the-badge)](https://xiaoxiao0406.github.io/vqvla.github.io/)
-[![HF Models](https://img.shields.io/badge/%F0%9F%A4%97-Models-yellow?style=for-the-badge)](https://huggingface.co/VQ-VLA)
-[![PyTorch](https://img.shields.io/badge/PyTorch-2.2.0-EE4C2C.svg?style=for-the-badge&logo=pytorch)](https://pytorch.org/get-started/locally/)
-[![Python](https://img.shields.io/badge/python-3.10-blue?style=for-the-badge)](https://www.python.org)
-[![License](https://img.shields.io/github/license/TRI-ML/prismatic-vlms?style=for-the-badge)](LICENSE)
+[![arXiv](https://img.shields.io/badge/arXiv-2507.01016-df2a2a)](https://arxiv.org/abs/2507.01016)
+[![Project](https://img.shields.io/badge/Project-Page-orange)](https://xiaoxiao0406.github.io/vqvla.github.io/)
+[![HF Models](https://img.shields.io/badge/%F0%9F%A4%97-Models-yellow)](https://huggingface.co/VQ-VLA)
+[![PyTorch](https://img.shields.io/badge/-PyTorch_2.2.0-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org/get-started/locally/)
+[![Python](https://img.shields.io/badge/-Python_3.10-blue?logo=python&logoColor=white)](https://www.python.org)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
 **ICCV 2025**
 
