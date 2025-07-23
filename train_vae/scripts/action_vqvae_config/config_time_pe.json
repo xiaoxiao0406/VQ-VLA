@@ -1,0 +1,65 @@
+{
+    "_class_name": "ActionVQVAE",
+    "_diffusers_version": "0.29.2",
+    "decoder_act_fn": "silu",
+    "decoder_block_dropout": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "decoder_block_out_channels": [
+        128,
+        256,
+        256,
+        512
+    ],
+    "decoder_in_channels": 128,
+    "decoder_layers_per_block": [
+        4,
+        4,
+        4,
+        4
+    ],
+    "decoder_norm_num_groups": 32,
+    "decoder_out_channels": 1,
+    "decoder_type": "causal_vae_conv",
+    "decoder_up_block_types": [
+        "UpDecoderBlockCausal2D",
+        "UpDecoderBlockCausal2D",
+        "UpDecoderBlockCausal2D",
+        "UpDecoderBlockCausal2D"
+    ],
+    "encoder_act_fn": "silu",
+    "encoder_block_dropout": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "encoder_block_out_channels": [
+        128,
+        256,
+        256,
+        512
+    ],
+    "encoder_double_z": true,
+    "encoder_down_block_types": [
+        "DownEncoderBlockCausal2D",
+        "DownEncoderBlockCausal2D",
+        "DownEncoderBlockCausal2D",
+        "DownEncoderBlockCausal2D"
+    ],
+    "encoder_in_channels": 1,
+    "encoder_layers_per_block": [
+        4,
+        4,
+        4,
+        4
+    ],
+    "encoder_norm_num_groups": 32,
+    "encoder_out_channels": 128,
+    "encoder_type": "causal_vae_conv",
+    "use_action_type_pe": false,
+    "use_time_pe": true
+}
