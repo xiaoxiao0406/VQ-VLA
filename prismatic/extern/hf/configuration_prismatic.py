@@ -5,15 +5,12 @@ HuggingFace-style configuration definition for Prismatic VLMs, inheriting from `
 Default configuration specifies `siglip-224px+7b`.
 """
 
-import os
-from typing import Any, Dict, List, Optional, Union
+from typing import Any, Dict, List, Optional
 
 from transformers import PretrainedConfig
 from transformers.models.auto import CONFIG_MAPPING
 
 from prismatic.action_vqvae import ActionVQVAELossWrapper
-
-# from prismatic.vqvae.vae_temporal import VqVae
 
 # === Utilities for Mapping Prismatic names to HF names ===
 # fmt: off
@@ -139,20 +136,6 @@ class PrismaticConfig(PretrainedConfig):
         # Dispatch **kwargs to super() =>> note that `pad_token_id` collides, so we pass it in here as well...
         super().__init__(pad_token_id=pad_token_id, **kwargs)
 
-    def to_json_file(self, json_file_path: Union[str, os.PathLike], use_diff: bool = True):
-        """
-        Save this instance to a JSON file.
-
-        Args:
-            json_file_path (`str` or `os.PathLike`):
-                Path to the JSON file in which this configuration instance's parameters will be saved.
-            use_diff (`bool`, *optional*, defaults to `True`):
-                If set to `True`, only the difference between the config instance and the default `PretrainedConfig()`
-                is serialized to JSON file.
-        """
-        with open(json_file_path, "w", encoding="utf-8") as writer:
-            writer.write(self.to_json_string(use_diff=use_diff))
-
 
 class OpenVLAConfig(PrismaticConfig):
     model_type: str = "openvla"
@@ -184,12 +167,7 @@ class ConvVLAConfig(PrismaticConfig):
         self.norm_stats, self.codebook_size, self.n_action_bins = norm_stats, codebook_size, n_action_bins
         self.output_token_num = vq_layer_group
         self.action_chunk_size = action_chunk_size
-        # self.vqvae_model_config = {
-        #     "config_path": "train_vae/scripts/action_vqvae_config",
-        #     "eval": True,
-        #     "use_action_type_pe": True,
-        #     "use_time_pe": True,
-        # }
+
         self.vqvae_model = ActionVQVAELossWrapper(
             "train_vae/scripts/action_vqvae_config",
             is_eval=True,
@@ -198,3 +176,13 @@ class ConvVLAConfig(PrismaticConfig):
         )
 
         super().__init__(**kwargs)
+
+    def to_json_string(self, use_diff: bool = True) -> str:
+        import json
+
+        if use_diff is True:
+            config_dict = self.to_diff_dict()
+        else:
+            config_dict = self.to_dict()
+        config_dict.pop("vqvae_model", None)
+        return json.dumps(config_dict, indent=2, sort_keys=True) + "\n"
