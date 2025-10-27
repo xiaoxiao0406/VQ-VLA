@@ -166,7 +166,7 @@ def finetune(cfg: FinetuneConfig) -> None:
         use_action_type_pe=cfg.use_action_type_pe,
         use_time_pe=cfg.use_time_pe,
         freeze=True,
-        eval=True,
+        is_eval=True,
     )
     device = torch.device(cfg.device)
 
