@@ -29,7 +29,7 @@ classifiers = [
 ]
 dependencies = [
     "accelerate>=0.25.0",
-    "diffusers==0.33.1"
+    "diffusers==0.33.1",
     "draccus==0.8.0",
     "einops",
     "einx",
